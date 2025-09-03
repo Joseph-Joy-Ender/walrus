@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: walrus-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: testwalrus
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: Password
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

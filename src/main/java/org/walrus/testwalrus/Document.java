@@ -19,6 +19,6 @@ public class Document {
     private String userId;
     private String fileName;
     private String blobId;
-    private String objectId;
+    private String identifier;
     private LocalDateTime createdAt;
 }
